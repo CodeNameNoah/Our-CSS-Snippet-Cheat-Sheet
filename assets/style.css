@@ -1,9 +1,13 @@
 :root {
+    --parchment:#FCF5E5;
+    --timberwolf:#CDD3CE;
+    --cordovan:#8c2f39;
+    --lightcolor:white;
 }
 
 body {
   font-family: "Cormorant", monospace;
-  background-color: #fcf5e5;
+  background:linear-gradient(var(--parchment), var(--timberwolf));
 }
 
 h1 {
@@ -19,13 +23,21 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content:space-around;
 }
 
 .snippet-card {
-  flex: 1 0 400px;
+  transition: margin 0.5s ease-in-out;
+  /* flex: 1 0 400px; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--lightcolor);
+  margin: 60px;
+}
+
+.snippet-card:hover {
+    margin: 20px;
 }
 
 .snippet-card h2 {
@@ -37,6 +49,20 @@ h2 {
 pre {
   margin-left: 20px;
   padding: 20px;
-  background-color: #8c2f39;
-  color: #fff;
+  background-color: var(--cordovan);
+  /* background:linear-gradient(#8c2f39, #fcf5e5) ; */
+  color: var(--lightcolor);
+  user-select: text;
+}
+
+@media screen and (max-width:992px) {
+    .snippet-card {flex:1 0 30%;}
+}
+
+@media screen and (max-width:768px) {
+   .snippet-card {flex:1 0 50%;}
+}
+
+@media screen and (max-width:576px) {
+  .snippet-card {flex:1 0 100%;}
 }
