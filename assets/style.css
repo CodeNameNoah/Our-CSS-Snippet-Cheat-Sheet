@@ -1,13 +1,13 @@
 :root {
-    --parchment:#FCF5E5;
-    --timberwolf:#CDD3CE;
-    --cordovan:#8c2f39;
-    --lightcolor:white;
+  --parchment: #fcf5e5;
+  --timberwolf: #cdd3ce;
+  --cordovan: #8c2f39;
+  --lightcolor: white;
 }
 
 body {
   font-family: "Cormorant", monospace;
-  background:linear-gradient(var(--parchment), var(--timberwolf));
+  background: linear-gradient(var(--parchment), var(--timberwolf));
 }
 
 h1 {
@@ -23,7 +23,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 
 .snippet-card {
@@ -37,7 +37,7 @@ h2 {
 }
 
 .snippet-card:hover {
-    margin: 20px;
+  margin: 20px;
 }
 
 .snippet-card h2 {
@@ -55,14 +55,25 @@ pre {
   user-select: text;
 }
 
-@media screen and (max-width:992px) {
-    .snippet-card {flex:1 0 30%;}
+@media screen and (max-width: 992px) {
+  .snippet-card {
+    flex: 1 0 30%;
+  }
 }
 
-@media screen and (max-width:768px) {
-   .snippet-card {flex:1 0 50%;}
+@media screen and (max-width: 768px) {
+  .snippet-card {
+    flex: 1 0 50%;
+  }
 }
 
-@media screen and (max-width:576px) {
-  .snippet-card {flex:1 0 100%;}
+@media screen and (max-width: 576px) {
+  .snippet-card {
+    flex: 1 0 100%;
+  }
+}
+
+#linear-paragraph {
+  display: flex;
+  width: 377px;
 }
